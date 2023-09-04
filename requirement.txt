@@ -1,0 +1,8 @@
+pandas==1.5.3
+sqlalchemy
+pymysql
+pymongo
+db-sqlite3
+psycopg2-binary
+pyhive
+trino

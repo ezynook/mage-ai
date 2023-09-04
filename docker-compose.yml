@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  mage_ai:
+    # build: .
+    image: ghcr.io/ezynook/mage-ai/mage-ai:latest
+    container_name: mage_ai
+    restart: always
+    ports:
+      - ${PORT}:6789
+    volumes:
+      - ./data:/root/.mage_data
+    environment:
+      - PROJECT_NAME=${PROJECT_NAME}
+    networks:
+      - mage_network
+
+networks:
+  mage_network:
+    driver: bridge
